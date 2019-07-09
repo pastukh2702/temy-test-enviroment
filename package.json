@@ -1,0 +1,29 @@
+{
+  "name": "temy-test-enviroment",
+  "version": "0.2.7",
+  "description": "User registration with JSON SERVER",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm-run-all --parallel wpack json-server",
+    "json-server": "node ./json-server/server.js",
+    "wpack": "webpack ./js/index.js --output-path ./js --output-filename bundle.js --mode development --color --watch --module-bind js=babel-loader"
+  },
+  "author": "Volodymyr Pastukh",
+  "license": "ISC",
+  "dependencies": {
+    "connect": "^3.7.0",
+    "json-server": "^0.15.0",
+    "serve-static": "^1.14.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-private-methods": "^7.4.3",
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "babel-loader": "^8.0.5",
+    "npm-run-all": "^4.1.5",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  }
+}
